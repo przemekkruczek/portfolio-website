@@ -1,0 +1,27 @@
+.socialMedia_invisible {
+  visibility: hidden;
+}
+.socialMedia {
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ }
+.socialMedia a {
+  width: 30px;
+  height: 30px;
+  color: #ff7761;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+  &:hover {
+    color: #ECB104;
+}
+}
+
+.twitter, .facebook, .linkedin, .instagram, .google-plus {
+  margin:8px;
+}

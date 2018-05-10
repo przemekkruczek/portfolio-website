@@ -1,0 +1,51 @@
+.loading {
+  display: flex;
+  justify-content:center;
+  margin-top: 20%;
+}
+@mixin bgGradient {
+  background: #8C6800 linear-gradient(transparent 0%, transparent 50%, #ECB104 50%, #ECB104 100%);
+}
+.scroll {
+  @include bgGradient;
+  position: relative;
+  width: 60px;
+  height: 120px;
+  background-size: 100%;
+  border-radius: 100px;
+  background-size: 200%;
+  animation: colorSlide 5s forwards linear;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  &:before {
+    width: 60px - 6px;
+    height: 120px - 6px;
+    background-color: #222a30;
+    border-radius: 100px;
+
+  }
+  &:after {
+    background-color: #ECB104;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 5px auto;
+    animation: scrollAnim 1.5s 0s forwards normal;
+  }
+}
+
+@keyframes colorSlide {
+  0% { background-position: 0% 100%; }
+  20% { background-position: 0% 0%; }
+  20% { background-color:  #8C6800; }
+}
+@keyframes scrollAnim {
+  100%{
+    margin-top: 90px; background-color: #222a30;
+  }
+}

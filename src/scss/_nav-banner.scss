@@ -1,0 +1,88 @@
+.mainMenu_invisible {
+  visibility: hidden;
+}
+.mainMenu {
+  margin-top:40px;
+  transition: margin-top 600ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.button{
+  margin:0 50px;
+  margin-bottom: 5px;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 18px;
+  background: none;
+  border: 3px solid #ECB104;
+  border-radius: 20px;
+  transition: color 0.25s;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+.button:after{
+  content: '';
+  bottom: 0;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: #ECB104;
+  transition: 0.5s all;
+}
+.midBtn:after{
+  content: '';
+  bottom: 0;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: #ff7761;
+  transition: 0.5s all;
+}
+.midBtn{
+  margin:0 50px;
+  margin-bottom: 5px;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 18px;
+  background: none;
+  border: 3px solid #ff7761;
+  border-radius: 20px;
+  transition: color 0.25s;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+.button:hover {
+  border-color: transparent;
+  color: #ff7761;
+}
+.midBtn:hover{
+  color: #ECB104;
+  border-color: transparent;
+}
+.midBtn:hover:after, .button:hover:after{
+  left: 10px;
+  right: 10px;
+}
+a.button {
+  text-decoration: none;
+  color: #ECB104;
+}
+a.midBtn {
+  text-decoration: none;
+  color: #ff7761;
+}
+
